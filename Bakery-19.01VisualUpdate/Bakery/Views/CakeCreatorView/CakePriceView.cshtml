@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Bakery.Models.CakeCreatorView>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Kształt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Biszkopt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Poziomy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Krem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nadzienie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Tynk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Wykończenie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dodatki_na_ścianie_wieszchniej)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dodatki_na_ścianie_bocznej)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cena_za_tort)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kształt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Biszkopt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Poziomy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Krem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nadzienie)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Tynk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Wykończenie)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dodatki_na_ścianie_wieszchniej)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dodatki_na_ścianie_bocznej)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cena_za_tort)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID_Zamówienia }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID_Zamówienia }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID_Zamówienia })
+        </td>
+    </tr>
+}
+
+</table>
